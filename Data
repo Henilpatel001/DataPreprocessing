@@ -1,0 +1,18 @@
+Import necessary librories
+import pandas as Ab
+from sklearn.nodel_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleInputer
++0
+df a pd.read_csv("Data.csv')
+imputer = SinpleInputer(strategy='nean')
+df['3"] = imputer.fit_transforn(df[["3"]])
+df['4'] = df['3'].apply(lambda.x: np.log(x+ 1))
+df_encoded = pd.get_dummies(df, columnsz["3'])
+Ktrain, X_test, y_train, y_test = train_test_split(df. encoded.drop("4", axisal),
+df_encoded['t4"],
+test_size=0.2,
+randon_states42)
+scaler = Standardscaler()
+X_train_scaled = scaler.fit_transforn(X_train)
+X_test_scaled scaler.transform(X_test)
